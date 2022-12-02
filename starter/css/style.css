@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Zen+Dots&display=swap');
+
+:root {
+  --color1:#9fc5e8;
+  --color2:#0b5394;
+  --color3:#149fc8;
+  --color4:#1f184d;
+  --color5:#ffffff;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 30px;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: var(--color1)
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+header {
+ background-color: var(--color4);
+}
+p {
+  margin: 0;
+}
+
+/* Header & Navigation  */
+
+.name {
+  color: var(--color5);
+  padding-left: 30px;
+  padding-top: 30px;
+  font-family: 'Nerko One', cursive;
+  font-size: 400%;
+}
+nav ul {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  position: relative;
+  top: -50px;
+}
+nav ul li {
+  padding: 5px;
+  margin-right: 25px;
+  
+}
+.nav-link {
+  color: var(--color3);
+  font-size: 150%;
+  font-family:  'Zen Dots', cursive;
+}
+
+/* Banner for advert */
+
+.hero-banner {
+  clear:both;
+  background-image: url(../images/navy-blue-2940561_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: -50px;
+  margin-bottom: 10px;
+  color: var(--color5);
+  padding: 20px;
+}
+section h2 {
+  border-right: 2px solid var(--color2);
+  width: 200px;
+}
+
+
+/* Flex flex, and grid with work examples */
+
+.page-wrapper {
+  display: flex;
+  
+  flex-direction: column;
+}
+#about, #contact, #work {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+}
+.section-text, .works {
+  margin-left: 20px;
+  padding: 5px;
+  width: 80%;
+}
+
+.works {
+  background-color: #149fc8;
+  display: grid;
+  grid-template-rows: 3fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "main main"
+  "main main"
+  "main main"
+  "second third"
+  "forth fifth";
+}
+#past-work1 {
+  grid-area: main;
+  background-image: url(../images/main.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+
+}
+#past-work2 {
+  grid-area: second;
+}
+#past-work3 {
+  grid-area: third;
+}
+#past-work4 {
+  grid-area: forth;
+}
+#past-work5 {
+  grid-area: fifth;
+}

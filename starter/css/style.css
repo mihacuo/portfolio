@@ -52,7 +52,6 @@ nav ul {
 nav ul li {
   padding: 5px;
   margin-right: 25px;
-  
 }
 .nav-link {
   color: var(--color3);
@@ -83,10 +82,9 @@ section h2 {
 
 .page-wrapper {
   display: flex;
-  
   flex-direction: column;
 }
-#about, #contact, #work {
+#about, #contact, #work, #cv {
   display: flex;
   padding: 10px;
   margin: 10px;
@@ -109,23 +107,80 @@ section h2 {
   "second third"
   "forth fifth";
 }
+.works > * {
+  height: 400px;
+  text-align: end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  border: 2px dashed var(--color1);
+}
 #past-work1 {
   grid-area: main;
   background-image: url(../images/main.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-
 }
 #past-work2 {
   grid-area: second;
+  background-image: url(../images/second.jpg);
 }
 #past-work3 {
   grid-area: third;
+  background-image: url(../images/third.jpg);
 }
 #past-work4 {
   grid-area: forth;
+  background-image: url(../images/forth.jpg);
 }
 #past-work5 {
   grid-area: fifth;
+  background-image: url(../images/fifth.jpg);
+}
+.project-title {
+  border: 1px solid var(--color3);
+  float: left;
+  background-color: var(--color4);
+  color: var(--color5);
+  opacity: 0.7;
+  position: relative;
+  top: 40%;
+  font-size: 200%;
+}
+
+/* Let's implement responsivness */
+
+@media only screen and (max-width: 800px) {
+  /* body {
+    background-color: yellow;
+  } */
+  nav ul {
+    flex-direction: column;
+  }
+  .name {
+    color: var(--color5);
+    padding: auto;
+    
+    font-size: 200%;
+    margin-bottom: 40px;
+  }
+
+  .works {
+    background-color: #149fc8;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "main"
+    "second"
+    "third"
+    "forth"
+    "fifth";
+  }
+  .project-title {
+    font-size: 140%;
+  }
+  section h2 {
+    border-right: 1px solid var(--color2);
+    width: 100px;
+    font-size: medium;
+  }
 }

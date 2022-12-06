@@ -98,7 +98,7 @@ section h2 {
 .works {
   background-color: #149fc8;
   display: grid;
-  grid-template-rows: 3fr 1fr 1fr;
+  grid-template-rows: 5fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
   "main main"
@@ -113,7 +113,7 @@ section h2 {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
-  border: 2px dashed var(--color1);
+  /* border: 2px dashed var(--color1); */
 }
 #past-work1 {
   grid-area: main;
